@@ -16,7 +16,7 @@
         
         <!-- load angular via CDN -->
        <script src="lib/angular.min.js"></script>
-        <script src="app.js"></script>
+        <script src="js/app.js"></script>
     </head>
     <body>
 
@@ -26,17 +26,28 @@
 
         <div class="conaaatainer">
 
-           <div ng-controller="mainControlller">
+           <div >
             
-                <div>
-                    <label>What is your twitter handle?</label>
+                <div ng-controller="mainCtrl1">
+                    <label>What is your twitter lower handle?</label>
                     <input type="text" ng-model="handle" />
+                    
+                    <h1>twitter.com/{{ lowercasehandle() }}</h1>
+                  <h1>twitter.com/{{ handle}}</h1>
                 </div>
+                 <hr />
+                <div ng-controller="mainCtrl2">
+                    <label>What is your twitter upper handle?</label>
+                    <input type="text" ng-model="handle" />
+                    
+                    <h1>twitter.com/{{ uppercasehandle() }}</h1>
+                  <h1>twitter.com/{{ handle}}</h1>
+                </div>
+                
                 
                 <hr />
                 
-                <h1>twitter.com/{{ lowercasehandle() }}</h1>
-                  <h1>twitter.com/{{ handle}}</h1>
+                
                 
             </div>
 		</div>
